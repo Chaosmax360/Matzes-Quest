@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqlkxu8518305"
+path="res://.godot/imported/FNAF Jumpscare Scream.mp3-aaaf2987612b50665d16b546fd384a9b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/effects/FNAF Jumpscare Scream.mp3"
+dest_files=["res://.godot/imported/FNAF Jumpscare Scream.mp3-aaaf2987612b50665d16b546fd384a9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bi2iv6aaewxgm"
+path="res://.godot/imported/FNAF Laugh.mp3-cefc94ec00aa7c2ea167a7145a77ba22.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/effects/FNAF Laugh.mp3"
+dest_files=["res://.godot/imported/FNAF Laugh.mp3-cefc94ec00aa7c2ea167a7145a77ba22.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

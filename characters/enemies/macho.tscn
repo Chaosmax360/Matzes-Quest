@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://brb536tty0iw"]
+
+[ext_resource type="Script" path="res://characters/enemies/macho.gd" id="1_ncj2l"]
+[ext_resource type="Texture2D" uid="uid://bfxstjntgqanb" path="res://assets/texture/entities/enemies/Macho.jpg" id="2_v7yb8"]
+[ext_resource type="AudioStream" uid="uid://calqr2q1kswhl" path="res://assets/audio/effects/ROBLOX Oof Sound Effect.mp3" id="3_jab1q"]
+[ext_resource type="Texture2D" uid="uid://drnvb38txucyw" path="res://assets/texture/entities/player/band-aid.png" id="4_iy6os"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv7al"]
+size = Vector2(22.5, 7.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcv38"]
+size = Vector2(22.5, 7.4)
+
+[node name="macho" type="CharacterBody2D"]
+script = ExtResource("1_ncj2l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_v7yb8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10.7)
+shape = SubResource("RectangleShape2D_wv7al")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 10.7)
+shape = SubResource("RectangleShape2D_mcv38")
+
+[node name="until_attack" type="Timer" parent="."]
+one_shot = true
+
+[node name="audio" type="Node" parent="."]
+
+[node name="damage_taken" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("3_jab1q")
+volume_db = 24.0
+max_polyphony = 3
+
+[node name="band_aid1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-7, -9)
+scale = Vector2(0.0119531, 0.0119531)
+texture = ExtResource("4_iy6os")
+
+[node name="band_aid2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(6, 5)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("4_iy6os")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="until_attack" to="." method="_on_until_attack_timeout"]

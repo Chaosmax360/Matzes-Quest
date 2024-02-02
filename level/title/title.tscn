@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://duw04hc53427f"]
+
+[ext_resource type="Script" path="res://level/title/title.gd" id="1_i56ap"]
+[ext_resource type="Texture2D" uid="uid://cfdcjxhwolooj" path="res://assets/texture/world/images/matzes_quest_title.png" id="2_y1bsr"]
+[ext_resource type="Texture2D" uid="uid://bwr1wxc04d88u" path="res://assets/texture/world/images/3fingerhand.jpg" id="3_4hqef"]
+[ext_resource type="Texture2D" uid="uid://bbdoxq8mvo00n" path="res://assets/texture/world/images/leave_game_button.png" id="4_e2oto"]
+[ext_resource type="AudioStream" uid="uid://d36k5it662g3a" path="res://assets/audio/music/Das Türkische Lied von Alice.mp3" id="4_nvopw"]
+
+[node name="title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i56ap")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = -308.0
+offset_right = 596.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_y1bsr")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 146.0
+offset_right = 542.0
+offset_bottom = 541.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_4hqef")
+
+[node name="leave_game" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -167.0
+offset_top = 9.0
+offset_right = 368.0
+offset_bottom = 294.0
+grow_horizontal = 0
+scale = Vector2(0.3, 0.3)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_e2oto")
+
+[node name="audio" type="Node" parent="."]
+
+[node name="title_bgm" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("4_nvopw")
+volume_db = -5.0
+
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/leave_game" to="." method="_on_leave_game_pressed"]

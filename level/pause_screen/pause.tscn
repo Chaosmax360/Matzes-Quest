@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://22prdpwmkx8a"]
+
+[ext_resource type="Script" path="res://level/pause_screen/pause.gd" id="1_gi8e5"]
+[ext_resource type="Texture2D" uid="uid://ciqa3xe6kmge0" path="res://assets/texture/world/images/quit_button.png" id="2_tunvd"]
+[ext_resource type="Texture2D" uid="uid://cg0gyd03bylhv" path="res://assets/texture/world/images/resume_button.png" id="3_chast"]
+
+[node name="pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gi8e5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="quit" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -50.0
+offset_right = 298.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_tunvd")
+
+[node name="resume" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 59.0
+offset_top = -52.0
+offset_right = 790.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_chast")
+
+[connection signal="pressed" from="CanvasLayer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/resume" to="." method="_on_resume_pressed"]

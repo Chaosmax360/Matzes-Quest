@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bum7eg1i3uf38"]
+
+[ext_resource type="Script" path="res://characters/enemies/maximax.gd" id="1_5l6i2"]
+[ext_resource type="Texture2D" uid="uid://ccaso81hnmf7r" path="res://assets/texture/entities/enemies/maximax.jpg" id="2_5qgrp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmlap"]
+size = Vector2(200, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stdb3"]
+size = Vector2(200, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhewq"]
+size = Vector2(198, 20)
+
+[node name="maximax" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_5l6i2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.2)
+texture = ExtResource("2_5qgrp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gmlap")
+
+[node name="walk_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="death" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_stdb3")
+
+[node name="jump" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jump"]
+position = Vector2(0, -100)
+shape = SubResource("RectangleShape2D_rhewq")
+
+[connection signal="body_entered" from="death" to="." method="_on_death_body_entered"]
+[connection signal="body_entered" from="jump" to="." method="_on_jump_body_entered"]

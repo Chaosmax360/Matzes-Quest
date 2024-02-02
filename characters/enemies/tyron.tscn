@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://cftiqp3ev120v"]
+
+[ext_resource type="Script" path="res://characters/enemies/Tyron.gd" id="1_ccxp5"]
+[ext_resource type="Texture2D" uid="uid://beskvlhdk66ni" path="res://assets/texture/entities/enemies/Tyron.jpg" id="2_2awsk"]
+[ext_resource type="AudioStream" uid="uid://calqr2q1kswhl" path="res://assets/audio/effects/ROBLOX Oof Sound Effect.mp3" id="3_kgmch"]
+[ext_resource type="Texture2D" uid="uid://drnvb38txucyw" path="res://assets/texture/entities/player/band-aid.png" id="4_uabj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhb40"]
+size = Vector2(24, 6.9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ofbv"]
+size = Vector2(24, 6.9)
+
+[node name="Tyron" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_ccxp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_2awsk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12.45)
+shape = SubResource("RectangleShape2D_mhb40")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 14.2)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1.75)
+shape = SubResource("RectangleShape2D_2ofbv")
+
+[node name="until_attack" type="Timer" parent="."]
+one_shot = true
+
+[node name="audio" type="Node" parent="."]
+
+[node name="damage_taken" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("3_kgmch")
+volume_db = 24.0
+max_polyphony = 3
+
+[node name="band_aid1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-7, -9)
+scale = Vector2(0.0119531, 0.0119531)
+texture = ExtResource("4_uabj6")
+
+[node name="band_aid2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(6, 5)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("4_uabj6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="until_attack" to="." method="_on_until_attack_timeout"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d36k5it662g3a"
+path="res://.godot/imported/Das Türkische Lied von Alice.mp3-1f419c5c3418ca3c9fb3bf63c7c12b4e.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Das Türkische Lied von Alice.mp3"
+dest_files=["res://.godot/imported/Das Türkische Lied von Alice.mp3-1f419c5c3418ca3c9fb3bf63c7c12b4e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

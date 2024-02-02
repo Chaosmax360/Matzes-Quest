@@ -1,0 +1,14 @@
+# Made in Blockbench 4.8.3
+newmtl m_041b8109-9761-7e68-ed81-0b6ef69dcc9e
+map_Kd spruce_log.png 
+newmtl m_8c3ab3a1-05df-8c8b-f118-3f434f444554
+map_Kd cobblestone.png 
+newmtl m_4edfccfb-c5c6-9eac-b783-fac6c75d77ce
+map_Kd iron_bars.png 
+newmtl m_b3c9dc3d-4035-c531-52cd-288058d6763c
+map_Kd bricks.png 
+newmtl m_1308f990-c978-e46c-70ec-2e1458238432
+map_Kd black_concrete.png 
+newmtl m_d79a1c8e-aa43-39be-d472-ff184a58f852
+map_Kd sign.png 
+newmtl none

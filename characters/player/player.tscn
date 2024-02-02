@@ -1,0 +1,350 @@
+[gd_scene load_steps=23 format=3 uid="uid://fsy0kt5taoj0"]
+
+[ext_resource type="Script" path="res://characters/player/player.gd" id="1_nvhvm"]
+[ext_resource type="Texture2D" uid="uid://c4v7581hxd4nu" path="res://assets/texture/entities/player/matze.jpg" id="2_rth75"]
+[ext_resource type="Texture2D" uid="uid://cehuc3it44tvw" path="res://assets/texture/world/images/matze_hurr_hurr.jpg" id="3_3077l"]
+[ext_resource type="Texture2D" uid="uid://2vomfhpoiox5" path="res://assets/texture/world/images/matze_moon.jpg" id="4_0afkf"]
+[ext_resource type="Texture2D" uid="uid://cwdq8ngo1q850" path="res://assets/texture/world/images/matze_jumpscare.jpg" id="5_fi3kg"]
+[ext_resource type="AudioStream" uid="uid://dp8my7roelvc6" path="res://assets/audio/effects/Josh Hutcherson whistle.mp3" id="6_dmfsw"]
+[ext_resource type="Texture2D" uid="uid://b3ynnebkrojw7" path="res://assets/texture/entities/enemies/maxi.jpg" id="6_vfm88"]
+[ext_resource type="AudioStream" uid="uid://bi2iv6aaewxgm" path="res://assets/audio/effects/FNAF Laugh.mp3" id="7_3ynay"]
+[ext_resource type="AudioStream" uid="uid://cqlkxu8518305" path="res://assets/audio/effects/FNAF Jumpscare Scream.mp3" id="8_8c4q7"]
+[ext_resource type="AudioStream" uid="uid://c7usytvck81dr" path="res://assets/audio/effects/Escarie alert.mp3" id="10_pkttc"]
+[ext_resource type="PackedScene" uid="uid://22prdpwmkx8a" path="res://level/pause_screen/pause.tscn" id="11_0icr8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhfvl"]
+size = Vector2(55, 55)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1givw"]
+font_size = 69
+font_color = Color(0, 1, 1, 1)
+outline_size = 10
+outline_color = Color(1, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8p6km"]
+font_size = 79
+font_color = Color(1, 0, 0.482353, 1)
+outline_size = 20
+outline_color = Color(0.686275, 0, 0.686275, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2fdos"]
+font_size = 91
+font_color = Color(1, 1, 0, 1)
+outline_size = 19
+outline_color = Color(0.65098, 0.521569, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j37j8"]
+font_size = 50
+font_color = Color(0, 0.717647, 0.207843, 1)
+outline_size = 12
+outline_color = Color(0.870588, 0.427451, 0.0588235, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2sr5u"]
+font_size = 23
+font_color = Color(0, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ge4ud"]
+font_size = 23
+font_color = Color(0, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_537ki"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/matze_hurr_hurr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_3077l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/moon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_0afkf")]
+}
+
+[sub_resource type="Animation" id="Animation_v7y5t"]
+resource_name = "moon"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/moon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_0afkf")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/moon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.588235)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/moon_label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-100, 275), Vector2(150, 275)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/moon_label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nbocx"]
+resource_name = "void"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/matze_hurr_hurr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_3077l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/matze_hurr_hurr:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.392157)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/voib_label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(350, 250)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/voib_label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p5t16"]
+_data = {
+"RESET": SubResource("Animation_537ki"),
+"moon": SubResource("Animation_v7y5t"),
+"void": SubResource("Animation_nbocx")
+}
+
+[node name="player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_nvhvm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("2_rth75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.27826e-07, -3.8147e-07)
+scale = Vector2(0.4, 0.4)
+shape = SubResource("RectangleShape2D_lhfvl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="matze_hurr_hurr" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3077l")
+expand_mode = 1
+
+[node name="moon" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0afkf")
+expand_mode = 1
+
+[node name="matze_jumpscare" type="TextureRect" parent="CanvasLayer"]
+visible = false
+modulate = Color(0.392157, 0.392157, 0.392157, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_fi3kg")
+expand_mode = 1
+
+[node name="maximax_death" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_vfm88")
+expand_mode = 1
+
+[node name="moon_label" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -49.0
+offset_right = -100.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "moon"
+label_settings = SubResource("LabelSettings_1givw")
+
+[node name="voib_label" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_right = 161.0
+offset_bottom = 112.0
+text = "voib"
+label_settings = SubResource("LabelSettings_8p6km")
+
+[node name="humpscare_label" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 25.0
+offset_top = 48.0
+offset_right = 563.0
+offset_bottom = 176.0
+text = "humpscare"
+label_settings = SubResource("LabelSettings_2fdos")
+
+[node name="escarie_alert_label" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 217.0
+offset_top = 425.0
+offset_right = 1097.0
+offset_bottom = 683.0
+text = "Numero 1 scariest jumpscares
+
+Escarie alert"
+label_settings = SubResource("LabelSettings_j37j8")
+horizontal_alignment = 2
+
+[node name="info_enemy" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 472.0
+offset_bottom = 158.0
+text = "Every enemy kills you.
+The void kills you.
+The moon kills you.
+You can jump on Maximax without dying.
+
+You can jump on the very big clouds."
+label_settings = SubResource("LabelSettings_2sr5u")
+
+[node name="info_player" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 713.0
+offset_top = 19.0
+offset_right = 1135.0
+offset_bottom = 124.0
+text = "[A], [D] to move left and right.
+[Space] to jump, you can double-jump.
+[S] to enter wide-mode."
+label_settings = SubResource("LabelSettings_ge4ud")
+horizontal_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p5t16")
+}
+
+[node name="audio" type="Node" parent="."]
+
+[node name="moon" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("6_dmfsw")
+volume_db = 24.0
+
+[node name="void" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("7_3ynay")
+volume_db = 24.0
+
+[node name="jumpscare" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("8_8c4q7")
+volume_db = 24.0
+
+[node name="escarie_alert" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("10_pkttc")
+volume_db = 24.0
+
+[node name="timer" type="Node" parent="."]
+
+[node name="camera_minus" type="Timer" parent="timer"]
+wait_time = 2.0
+one_shot = true
+
+[node name="pause" parent="." instance=ExtResource("11_0icr8")]
+process_mode = 2
+
+[connection signal="game_pause" from="." to="pause" method="_on_player_game_pause"]
+[connection signal="timeout" from="timer/camera_minus" to="." method="_on_camera_minus_timeout"]

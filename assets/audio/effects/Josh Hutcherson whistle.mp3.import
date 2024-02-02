@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp8my7roelvc6"
+path="res://.godot/imported/Josh Hutcherson whistle.mp3-69d733583cae2be8e88aa72b8a3b52ac.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/effects/Josh Hutcherson whistle.mp3"
+dest_files=["res://.godot/imported/Josh Hutcherson whistle.mp3-69d733583cae2be8e88aa72b8a3b52ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
