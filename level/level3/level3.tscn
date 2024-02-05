@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bf6fy64cxlnra"]
+[gd_scene load_steps=13 format=3 uid="uid://bf6fy64cxlnra"]
 
 [ext_resource type="PackedScene" uid="uid://d0puf6gd51d4u" path="res://characters/player/player_lvl3.tscn" id="1_2yxdm"]
+[ext_resource type="Script" path="res://level/level3/level3.gd" id="1_hqwcu"]
 [ext_resource type="PackedScene" uid="uid://csjcsj25ba67i" path="res://characters/enemies/lvl3_enemy1.tscn" id="2_tiljb"]
 [ext_resource type="Texture2D" uid="uid://b3puiema8op0m" path="res://assets/texture/entities/enemies/grumpy_matze.jpg" id="3_ig4gc"]
+[ext_resource type="ArrayMesh" uid="uid://dswq7yta0qelu" path="res://assets/texture/world/Tower.obj/Tower.obj" id="5_j460l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r8muj"]
 sky_top_color = Color(0.27451, 0.364706, 0.945098, 1)
@@ -35,17 +37,17 @@ size = Vector2(200, 200)
 data = PackedVector3Array(100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, 100, -100, 0, -100, 100, 0, -100)
 
 [node name="level3" type="Node3D"]
+script = ExtResource("1_hqwcu")
 
 [node name="player_lvl3" parent="." instance=ExtResource("1_2yxdm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8801, 1.51868, 4.01921)
-collision_layer = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.575776, 1.51868, 22.8821)
 
-[node name="lvl3_enemy1" parent="." instance=ExtResource("2_tiljb")]
+[node name="lvl3_enemy1" parent="." groups=["enemies"] instance=ExtResource("2_tiljb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31614, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 12.867, 0)
-light_color = Color(1, 0.705882, 0.32549, 1)
+light_color = Color(1, 0.313726, 0.309804, 1)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -63,3 +65,7 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_k3bks")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -59.9523)
+mesh = ExtResource("5_j460l")
