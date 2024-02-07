@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://be62vuloir3tp"
+path="res://.godot/imported/rocketlauncher.obj-54304b0f912371512b5fb1f37ef250b1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocketlauncher.obj-54304b0f912371512b5fb1f37ef250b1.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/rocketlauncher.obj"
+dest_files=["res://.godot/imported/rocketlauncher.obj-54304b0f912371512b5fb1f37ef250b1.mesh", "res://.godot/imported/rocketlauncher.obj-54304b0f912371512b5fb1f37ef250b1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

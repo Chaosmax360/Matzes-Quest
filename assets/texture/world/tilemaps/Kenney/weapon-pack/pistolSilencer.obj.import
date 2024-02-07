@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwnnf1gi0lm3m"
+path="res://.godot/imported/pistolSilencer.obj-8053e4388b07cc39c864205bb609442c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pistolSilencer.obj-8053e4388b07cc39c864205bb609442c.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/pistolSilencer.obj"
+dest_files=["res://.godot/imported/pistolSilencer.obj-8053e4388b07cc39c864205bb609442c.mesh", "res://.godot/imported/pistolSilencer.obj-8053e4388b07cc39c864205bb609442c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

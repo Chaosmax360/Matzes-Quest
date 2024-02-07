@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bu2ypd5m5q028"
+path="res://.godot/imported/ammo_sniper.obj-a57eb03900fa7ab8b0e27f2210138bd9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ammo_sniper.obj-a57eb03900fa7ab8b0e27f2210138bd9.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/ammo_sniper.obj"
+dest_files=["res://.godot/imported/ammo_sniper.obj-a57eb03900fa7ab8b0e27f2210138bd9.mesh", "res://.godot/imported/ammo_sniper.obj-a57eb03900fa7ab8b0e27f2210138bd9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

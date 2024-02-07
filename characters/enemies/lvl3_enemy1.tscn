@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://csjcsj25ba67i"]
+[gd_scene load_steps=7 format=3 uid="uid://csjcsj25ba67i"]
 
 [ext_resource type="Script" path="res://characters/enemies/lvl3_enemy1.gd" id="1_0gfpt"]
 [ext_resource type="Texture2D" uid="uid://drhjl6u4miatk" path="res://assets/texture/entities/enemies/happi_matze.jpg" id="2_g84o0"]
+[ext_resource type="AudioStream" uid="uid://c0i3flhx51tc4" path="res://assets/audio/effects/Anime girl sings ballin.mp3" id="3_7y0dh"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q1n3b"]
 
@@ -17,12 +18,33 @@ collision_layer = 4
 script = ExtResource("1_0gfpt")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0, 1, 0, 1)
+debug_path_custom_point_size = 10.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
 mesh = SubResource("PlaneMesh_q1n3b")
 surface_material_override/0 = SubResource("StandardMaterial3D_kn8nq")
 
+[node name="enemy_music" type="AudioStreamPlayer3D" parent="MeshInstance3D"]
+transform = Transform3D(-1, 2.5411e-21, 8.74228e-08, -8.74228e-08, -4.37114e-08, -1, 3.82137e-15, -1, 4.37114e-08, 0, 0, 0)
+stream = ExtResource("3_7y0dh")
+volume_db = 16.0
+max_db = 6.0
+max_distance = 20.0
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_vr41j")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_vr41j")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

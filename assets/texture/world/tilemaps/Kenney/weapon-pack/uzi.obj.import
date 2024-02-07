@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t7a2s4hfgkgr"
+path="res://.godot/imported/uzi.obj-1a199048a52d9636062689e226a61469.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uzi.obj-1a199048a52d9636062689e226a61469.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/uzi.obj"
+dest_files=["res://.godot/imported/uzi.obj-1a199048a52d9636062689e226a61469.mesh", "res://.godot/imported/uzi.obj-1a199048a52d9636062689e226a61469.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

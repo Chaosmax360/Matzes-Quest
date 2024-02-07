@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dem621ft3hdwi"
+path="res://.godot/imported/knife_sharp.obj-f449c76a991916d66159383a7335676b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/knife_sharp.obj-f449c76a991916d66159383a7335676b.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/knife_sharp.obj"
+dest_files=["res://.godot/imported/knife_sharp.obj-f449c76a991916d66159383a7335676b.mesh", "res://.godot/imported/knife_sharp.obj-f449c76a991916d66159383a7335676b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

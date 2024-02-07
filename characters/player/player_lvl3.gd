@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var speed = 10
 @export var sensitivity = 0.003
 @export var gravity = 30
+@export var health = 2
 
 @onready var camera_node = $camera_node
 @onready var camera = $camera_node/Camera3D
@@ -17,7 +18,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(- event.relative.x * sensitivity)
 		camera.rotate_x(- event.relative.y * sensitivity)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80))
 
 func _physics_process(delta):
 	if !is_on_floor():
@@ -45,3 +46,6 @@ func _physics_process(delta):
 		velocity.z = 0
 		
 	move_and_slide()
+	
+func hit(_damage_taken):
+	get_tree().change_scene_to_file("res://level/title/title.tscn")

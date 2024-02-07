@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgqjuoe7imjqj"
+path="res://.godot/imported/flamethrower.obj-242b2ef8ef2666bb5e04f891cdbeaed8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flamethrower.obj-242b2ef8ef2666bb5e04f891cdbeaed8.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/flamethrower.obj"
+dest_files=["res://.godot/imported/flamethrower.obj-242b2ef8ef2666bb5e04f891cdbeaed8.mesh", "res://.godot/imported/flamethrower.obj-242b2ef8ef2666bb5e04f891cdbeaed8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

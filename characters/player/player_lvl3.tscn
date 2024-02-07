@@ -1,25 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0puf6gd51d4u"]
+[gd_scene load_steps=5 format=3 uid="uid://d0puf6gd51d4u"]
 
 [ext_resource type="Script" path="res://characters/player/player_lvl3.gd" id="1_6j87m"]
+[ext_resource type="Script" path="res://characters/player/player_only.gd" id="2_jn7bj"]
+[ext_resource type="ArrayMesh" uid="uid://dswq7yta0qelu" path="res://assets/texture/world/Tower.obj/Tower.obj" id="3_trcro"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_khd6v"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tpuh1"]
-points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r3r8c"]
+points = PackedVector3Array(0.735001, 1.88025, 0.217925, -0.46046, 0.111732, -0.22454, 0.579878, 2.70724, -0.608828, -0.5625, 3.15264, 0.537401, 0.200572, 0.107856, 0.484428, 0.528171, -0.0321436, -0.247017, 0.5625, 3.22528, 0.562363, -0.562369, 3.15229, -0.5625, 0.269775, -0.0321436, -0.505413, -0.247017, -0.0321436, 0.528171, -0.712244, 1.88025, 0.217925, 0.218067, 1.88025, 0.735001, -0.608687, 2.70724, -0.608828, 0.537412, 3.15229, -0.5625, 0.218067, 1.88025, -0.712244, -0.505413, -0.0321436, 0.269633, -0.224541, 0.111732, -0.460459, -0.608687, 2.70724, 0.579736, 0.48452, 0.107559, 0.20048, 0.579878, 2.70724, 0.579736, -0.174548, 1.94721, 0.662312, 0.662312, 1.94721, -0.174548, -0.651752, 1.9533, -0.178032, -0.178032, 1.9533, -0.651752)
 
 [node name="player_lvl3" type="CharacterBody3D"]
 collision_layer = 2
 script = ExtResource("1_6j87m")
 
+[node name="player_only" type="Node" parent="."]
+script = ExtResource("2_jn7bj")
+
 [node name="camera_node" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="camera_node"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.357397, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -0.4)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_khd6v")
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1, 0)
+mesh = ExtResource("3_trcro")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_tpuh1")
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1, 0)
+shape = SubResource("ConvexPolygonShape3D_r3r8c")
 
 [node name="Marker3D" type="Marker3D" parent="."]

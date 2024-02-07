@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce81qamhmjj6m"
+path="res://.godot/imported/ammo_machinegun.obj-da57fb2956e88c2541b8178ab2816aef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ammo_machinegun.obj-da57fb2956e88c2541b8178ab2816aef.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/ammo_machinegun.obj"
+dest_files=["res://.godot/imported/ammo_machinegun.obj-da57fb2956e88c2541b8178ab2816aef.mesh", "res://.godot/imported/ammo_machinegun.obj-da57fb2956e88c2541b8178ab2816aef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

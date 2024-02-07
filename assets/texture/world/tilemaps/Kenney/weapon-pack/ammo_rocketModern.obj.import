@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clojb5w3wtxgt"
+path="res://.godot/imported/ammo_rocketModern.obj-52396e36b3fbe29be925d088235389bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ammo_rocketModern.obj-52396e36b3fbe29be925d088235389bd.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/ammo_rocketModern.obj"
+dest_files=["res://.godot/imported/ammo_rocketModern.obj-52396e36b3fbe29be925d088235389bd.mesh", "res://.godot/imported/ammo_rocketModern.obj-52396e36b3fbe29be925d088235389bd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

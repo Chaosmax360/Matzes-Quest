@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://csxj75m828tbf"
+path="res://.godot/imported/uziLongSilencer.obj-996628358e000e8130a0de09ad43fdac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uziLongSilencer.obj-996628358e000e8130a0de09ad43fdac.mesh"]
+
+source_file="res://assets/texture/world/tilemaps/Kenney/weapon-pack/uziLongSilencer.obj"
+dest_files=["res://.godot/imported/uziLongSilencer.obj-996628358e000e8130a0de09ad43fdac.mesh", "res://.godot/imported/uziLongSilencer.obj-996628358e000e8130a0de09ad43fdac.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

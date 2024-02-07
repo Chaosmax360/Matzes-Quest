@@ -4152,6 +4152,7 @@ layer_2/tile_data = PackedInt32Array(655358, 1245184, 1, 720894, 1245184, 7, 786
 
 [node name="lvl2_bgm" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource("6_gupma")
+stream_paused = true
 
 [node name="next_level" type="AudioStreamPlayer" parent="audio"]
 stream = ExtResource("12_m32e4")
